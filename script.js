@@ -8,19 +8,13 @@ function game() {
 
             // Computer randomly returns either 'rock', 'paper', 'scissors'
             function computerPlay() {
-                let computerNumber = Math.floor (Math.random() *3);
-                if (computerNumber===0) {
-                   return 'rock';
-                } else if (computerNumber===1) {
-                   return 'paper';
-                } else {
-                   return 'scissors';
-                }
+                const computerArray = ['rock', 'paper', 'scissors']
+                return computerArray[Math.floor (Math.random() *3)];
                }
 
-            let computerSelection = computerPlay();
-            let playerInitialSelection = prompt('Rock Paper or Scissors?', ' ');
-            let playerSelection = playerInitialSelection.toLowerCase();
+            const computerSelection = computerPlay();
+            const playerInitialSelection = prompt('Rock Paper or Scissors?', ' ');
+            const playerSelection = playerInitialSelection.toLowerCase();
 
             //If statements for all possible combinations.
 
